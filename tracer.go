@@ -447,6 +447,8 @@ func (t *Tracer) reportSpan(sp *Span) {
 		t.metrics.SpansFinishedNotSampled.Inc(1)
 	}
 
+	t.metrics.SpanFinishedWithDuration.Update(sp.duration.Milliseconds())
+
 	// Note: if the reporter is processing Span asynchronously then it needs to Retain() the span,
 	// and then Release() it when no longer needed.
 	// Otherwise, the span may be reused for another trace and its data may be overwritten.

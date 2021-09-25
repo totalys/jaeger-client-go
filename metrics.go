@@ -103,6 +103,8 @@ type Metrics struct {
 
 	// Number of times throttler failed to update.
 	ThrottlerUpdateFailure metrics.Counter `metric:"throttler_updates" tags:"result=err" help:"Number of times throttler failed to update"`
+
+	SpanFinishedWithDuration metrics.Gauge `metric:"Custom_traces" tags:"result=ok" help:"Duration of the span"`
 }
 
 // NewMetrics creates a new Metrics struct and initializes it.
