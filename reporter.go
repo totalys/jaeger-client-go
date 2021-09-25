@@ -22,7 +22,7 @@ import (
 
 	"github.com/opentracing/opentracing-go"
 
-	"github.com/uber/jaeger-client-go/internal/reporterstats"
+	"github.com/totalys/jaeger-client-go/internal/reporterstats"
 	"github.com/uber/jaeger-client-go/log"
 )
 

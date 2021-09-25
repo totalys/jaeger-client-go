@@ -24,9 +24,8 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/uber/jaeger-client-go/utils"
 
+	throttler "github.com/totalys/jaeger-client-go/internal/throttler/remote"
 	"github.com/uber/jaeger-client-go"
-	"github.com/uber/jaeger-client-go/internal/baggage/remote"
-	throttler "github.com/uber/jaeger-client-go/internal/throttler/remote"
 	"github.com/uber/jaeger-client-go/rpcmetrics"
 	"github.com/uber/jaeger-client-go/transport"
 	"github.com/uber/jaeger-lib/metrics"
@@ -306,17 +305,17 @@ func (c Configuration) NewTracer(options ...Option) (opentracing.Tracer, io.Clos
 	}
 
 	if c.BaggageRestrictions != nil {
-		mgr := remote.NewRestrictionManager(
-			c.ServiceName,
-			remote.Options.Metrics(tracerMetrics),
-			remote.Options.Logger(opts.logger),
-			remote.Options.HostPort(c.BaggageRestrictions.HostPort),
-			remote.Options.RefreshInterval(c.BaggageRestrictions.RefreshInterval),
-			remote.Options.DenyBaggageOnInitializationFailure(
-				c.BaggageRestrictions.DenyBaggageOnInitializationFailure,
-			),
-		)
-		tracerOptions = append(tracerOptions, jaeger.TracerOptions.BaggageRestrictionManager(mgr))
+		// mgr := remote.NewRestrictionManager(
+		// 	c.ServiceName,
+		// 	remote.Options.Metrics(tracerMetrics),
+		// 	remote.Options.Logger(opts.logger),
+		// 	remote.Options.HostPort(c.BaggageRestrictions.HostPort),
+		// 	remote.Options.RefreshInterval(c.BaggageRestrictions.RefreshInterval),
+		// 	remote.Options.DenyBaggageOnInitializationFailure(
+		// 		c.BaggageRestrictions.DenyBaggageOnInitializationFailure,
+		// 	),
+		// )
+		//tracerOptions = append(tracerOptions, jaeger.TracerOptions.BaggageRestrictionManager(mgr))
 	}
 
 	if c.Throttler != nil {

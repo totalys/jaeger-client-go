@@ -19,7 +19,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/uber/jaeger-client-go/internal/reporterstats"
+	"github.com/totalys/jaeger-client-go/internal/reporterstats"
 	"github.com/uber/jaeger-client-go/log"
 	"github.com/uber/jaeger-client-go/thrift"
 	j "github.com/uber/jaeger-client-go/thrift-gen/jaeger"

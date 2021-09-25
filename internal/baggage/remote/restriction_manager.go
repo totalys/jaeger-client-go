@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/uber/jaeger-client-go/internal/baggage"
+	"github.com/totalys/jaeger-client-go/internal/baggage"
 	thrift "github.com/uber/jaeger-client-go/thrift-gen/baggage"
 	"github.com/uber/jaeger-client-go/utils"
 )
