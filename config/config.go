@@ -24,8 +24,8 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/uber/jaeger-client-go/utils"
 
+	"github.com/totalys/jaeger-client-go"
 	throttler "github.com/totalys/jaeger-client-go/internal/throttler/remote"
-	"github.com/uber/jaeger-client-go"
 	"github.com/uber/jaeger-client-go/rpcmetrics"
 	"github.com/uber/jaeger-client-go/transport"
 	"github.com/uber/jaeger-lib/metrics"
