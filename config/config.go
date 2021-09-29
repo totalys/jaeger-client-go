@@ -22,12 +22,12 @@ import (
 	"time"
 
 	"github.com/opentracing/opentracing-go"
-	"github.com/totalys/jaeger-client-go/utils"
+	"github.com/uber/jaeger-client-go/utils"
 
-	"github.com/totalys/jaeger-client-go"
-	throttler "github.com/totalys/jaeger-client-go/internal/throttler/remote"
-	"github.com/totalys/jaeger-client-go/rpcmetrics"
-	"github.com/totalys/jaeger-client-go/transport"
+	"github.com/uber/jaeger-client-go"
+	throttler "github.com/uber/jaeger-client-go/internal/throttler/remote"
+	"github.com/uber/jaeger-client-go/rpcmetrics"
+	"github.com/uber/jaeger-client-go/transport"
 	"github.com/uber/jaeger-lib/metrics"
 )
 

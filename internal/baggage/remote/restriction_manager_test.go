@@ -29,8 +29,8 @@ import (
 	"github.com/uber/jaeger-lib/metrics/metricstest"
 	"go.uber.org/atomic"
 
-	"github.com/totalys/jaeger-client-go/internal/baggage"
 	"github.com/uber/jaeger-client-go"
+	"github.com/uber/jaeger-client-go/internal/baggage"
 	thrift "github.com/uber/jaeger-client-go/thrift-gen/baggage"
 )
 

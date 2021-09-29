@@ -25,7 +25,7 @@ import (
 
 	"github.com/uber/jaeger-client-go/thrift"
 
-	"github.com/totalys/jaeger-client-go"
+	"github.com/uber/jaeger-client-go"
 	j "github.com/uber/jaeger-client-go/thrift-gen/jaeger"
 )
 
